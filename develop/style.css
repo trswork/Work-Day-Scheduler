@@ -30,6 +30,21 @@ body {
     border-radius: 15px;
   }
   
+  .container {
+      display: grid;
+      grid-gap: 0.2rem;
+      grid-template-rows: repeat(28, 1fr);
+  }
+
+  .time {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-top: thin dotted #ccc;
+      height: 100%;
+      padding: 0 0.5rem;
+  }
+
   .row {
     white-space: pre-wrap;
     height: 80px;
@@ -40,6 +55,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    float: left;
   }
   
   .past {
