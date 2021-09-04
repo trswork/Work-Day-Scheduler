@@ -1,0 +1,18 @@
+:root {
+    --hue-past: gray;
+    --hue-current: red;
+    --hue-future: green;
+}
+
+time-block.past {
+    --hue: var(--hue-past);
+}
+
+time-block.future {
+    --hue: var(--hue-future);
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}

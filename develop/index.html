@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
+    <!-- Using Bootstrap for layout -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
 
-  <body>
+    <!-- This is the title-->
+    <title>Work Day Scheduler</title>
+</head>
+
+<body>
+    <!-- This is the header area-->
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
     </header>
-    <div class="schedulecontainer">
-        
-      <!-- Timeblocks go here -->
-      <div class="time start-900">9:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-1000">10:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-1100">11:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-1200">12:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-100">1:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-200">2:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-300">3:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-400">4:00</div><button id="save-btn" class="saveBtn">Save</button>
-      <div class="time start-500">5:00</div><button id="save-btn" class="saveBtn">Save</button>
+    <!-- This is a container-->
+    <div class="container">
+        <!-- 9AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="9">
+            <div class="input-group-prepend">
+                <!-- Added time-block class -->
+                <span class="input-group-text time-block block1">9 AM</span>
+            </div>
+            <input type="text" class="form-control form9" aria-label="Large">
+            <!-- <input class="btn saveBtn" type="submit" value="Save"> -->
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 10AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="10">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block2">10 AM</span>
+            </div>
+            <input type="text" class="form-control form10" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 11AM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="11">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block3">11 AM</span>
+            </div>
+            <input type="text" class="form-control form11" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 12PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="12">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block4">12 PM</span>
+            </div>
+            <input type="text" class="form-control form12" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 1PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="1">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block5">1  PM</span>
+            </div>
+            <input type="text" class="form-control form1" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 2PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="2">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block6">2  PM</span>
+            </div>
+            <input type="text" class="form-control form2" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 3PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="3">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block7">3  PM</span>
+            </div>
+            <input type="text" class="form-control form3" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 4PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="4">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block8">4  PM</span>
+            </div>
+            <input type="text" class="form-control form4" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
+        <!-- 5PM Timeblocks go here -->
+        <div class="input-group input-group-lg" data-hour="5">
+            <div class="input-group-prepend">
+                <span class="input-group-text time-block block9">5  PM</span>
+            </div>
+            <input type="text" class="form-control form5" aria-label="Large">
+            <button class="btn saveBtn"><i class="far fa-save"></i></button>
+            <!-- Use Favacon for save icon-->
+        </div>
     </div>
 
+
+    <!-- These are the Jquery and Moment JS links-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <script src="script.js"></script>
+
+    <script>
+       // Top date, works
+ moment(Date);
+ $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+
+ var currentTime = moment();
+ currentTime = currentTime.startOf("hour");
+
+  // Start local
+  var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+        // Test loop:
+
+        for (var i = 0; i < x.length; i++) {
+            var dataHour = localStorage.getItem(x[i]);
+            // form - control
+            $(".form" + x[i]).val(dataHour);
+        }
+
+        $(".saveBtn").click(function () {
+            event.preventDefault();
+            var formValue = $(this).siblings(".form-control").val();
+            console.log("This worked");
+            var listItem = $(this).parent().data("hour");
+
+            localStorage.setItem(listItem, formValue);
+        });
+    </script>
+
 </html>
